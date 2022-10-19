@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qRv-Dn-Wo6">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Контакты-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodAppTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Контакты" image="location" catalog="system" largeContentSizeImage="square.and.arrow.up" id="wSY-XZ-Dbn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="-85"/>
+        </scene>
+        <!--Меню-->
+        <scene sceneID="5gF-0m-Esv">
+            <objects>
+                <viewController id="mZE-gj-lE0" customClass="MenuViewController" customModule="FoodAppTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cR5-Qr-vUc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cj-XK-8pq">
+                                <rect key="frame" x="16" y="87" width="174" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <menu key="menu" id="fWq-wa-TjC">
+                                    <children>
+                                        <command title="Москва" id="yhS-sB-IYt"/>
+                                        <command title="Санкт-Петербург" id="mww-OD-BFt"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Москва" image="chevron.down" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ztd-ZL-Z8L">
+                                <rect key="frame" x="0.0" y="119" width="390" height="642"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KS0-Oi-nqk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ztd-ZL-Z8L" firstAttribute="leading" secondItem="KS0-Oi-nqk" secondAttribute="leading" id="9we-xi-37F"/>
+                            <constraint firstItem="ztd-ZL-Z8L" firstAttribute="top" secondItem="1cj-XK-8pq" secondAttribute="bottom" constant="10" id="H7I-Zd-B5Z"/>
+                            <constraint firstItem="1cj-XK-8pq" firstAttribute="top" secondItem="KS0-Oi-nqk" secondAttribute="top" constant="40" id="O43-Na-b1V"/>
+                            <constraint firstItem="1cj-XK-8pq" firstAttribute="leading" secondItem="KS0-Oi-nqk" secondAttribute="leading" constant="16" id="U8W-n0-Xra"/>
+                            <constraint firstItem="KS0-Oi-nqk" firstAttribute="trailing" secondItem="ztd-ZL-Z8L" secondAttribute="trailing" id="byx-Xh-ahe"/>
+                            <constraint firstItem="KS0-Oi-nqk" firstAttribute="trailing" secondItem="1cj-XK-8pq" secondAttribute="trailing" constant="200" id="nYp-Cb-nGH"/>
+                            <constraint firstItem="KS0-Oi-nqk" firstAttribute="bottom" secondItem="ztd-ZL-Z8L" secondAttribute="bottom" id="zLb-mU-Uc2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Меню" image="tablecells" catalog="system" id="QxU-37-EI7"/>
+                    <connections>
+                        <outlet property="cityButton" destination="1cj-XK-8pq" id="mUW-yN-Vr2"/>
+                        <outlet property="menuTableView" destination="ztd-ZL-Z8L" id="Kev-om-ry4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGg-Nj-mBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927.6923076923076" y="-786.25592417061603"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="f8G-BJ-368">
+            <objects>
+                <viewController id="Hyg-RV-RpH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dud-qr-kIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wsV-Pf-g0Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="JcK-wq-07I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLa-Bw-M9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="617"/>
+        </scene>
+        <!--Корзина-->
+        <scene sceneID="5lK-pB-0f5">
+            <objects>
+                <viewController id="OWG-c0-Tfr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k2c-VS-U59">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LXJ-AN-O2o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="basket" catalog="system" id="ae8-h7-G3A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNO-nQ-T4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="1317"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9et-Jc-PlN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qRv-Dn-Wo6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FZv-OC-qCE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mZE-gj-lE0" kind="relationship" relationship="viewControllers" id="57S-LH-7Zn"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cSL-Ue-TSi"/>
+                        <segue destination="Hyg-RV-RpH" kind="relationship" relationship="viewControllers" id="gEK-mo-88v"/>
+                        <segue destination="OWG-c0-Tfr" kind="relationship" relationship="viewControllers" id="Cug-cE-AUE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wli-Xe-NhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.538461538461537" y="6.3981042654028437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="basket" catalog="system" width="128" height="108"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
